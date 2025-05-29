@@ -1,0 +1,52 @@
+
+Object Oriented Python - Final Project
+Project Title: Container Hardening Analyzer with AI & Export
+Student: Mert Ural 
+
+1. What this project does:
+This project finds security problems in Dockerfiles and Kubernetes YAML files.
+It shows possible risks like running as root, using latest image tags, or exposing passwords.
+You can also choose to analyze with AI (GPT), which gives more real-world suggestions.
+Then you can export the results as a .csv, .txt, or .pdf file.
+
+2. What tools I used:
+- Python 3
+- Tkinter (for the GUI)
+- openai, fpdf, csv, dotenv (for GPT and export)
+- Object-Oriented Programming (OOP)
+
+3. What features it has:
+- Finds many security issues:
+  - Root user
+  - ENV password
+  - Incomplete Kubernetes settings
+  - ADD instead of COPY
+  - More…
+- AI (GPT) support to improve analysis (optional)
+- Risk score (0–10) with emoji:
+  - 🟢 Safe
+  - 🟡 Medium
+  - 🔴 Dangerous
+- Export findings as:
+  - CSV
+  - TXT
+  - PDF
+- Export a fixed version of the Dockerfile
+
+4. How it uses OOP:
+- I created classes like Finding, DockerfileAnalyzer, and GUIApp
+- Each part of the program uses a class and its methods
+- GPT support is also modular, inside a helper class
+
+5. What the GUI does:
+- User selects a file (.Dockerfile or .yaml)
+- Clicks Analyze
+- (Optional) Can use GPT by checking a box
+- The GUI shows found problems in a table
+- Shows a risk score with color
+- User can export the results as PDF, CSV, or TXT
+- Also can export a fixed Dockerfile version
+
+6. Why this project is useful:
+This project helps DevOps and security teams quickly detect and fix container security problems.
+It saves time, gives AI-powered advice, and allows easy exporting for reports or documentation.
